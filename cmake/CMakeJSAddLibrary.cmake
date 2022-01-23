@@ -1,0 +1,6 @@
+function(CMAKEJS_ADD_LIBRARY TARGET_NAME)
+    add_library(${TARGET_NAME} SHARED ${ARGN} ${CMAKE_JS_SRC})
+    target_include_directories(${TARGET_NAME} PRIVATE ${CMAKE_JS_INC} ${NODE_ADDON_API_DIR})
+    set_target_properties(${TARGET_NAME} PROPERTIES PREFIX "" SUFFIX ".node")
+    target_link_libraries(${TARGET_NAME} ${CMAKE_JS_LIB})
+endfunction()

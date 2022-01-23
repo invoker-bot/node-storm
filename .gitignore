@@ -1,0 +1,9 @@
+.idea
+.vs
+
+cmake-build*
+build
+out
+dist
+
+node_modules
